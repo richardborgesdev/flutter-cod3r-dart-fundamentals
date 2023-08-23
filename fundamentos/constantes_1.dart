@@ -9,7 +9,7 @@ void main(List<String> args) {
   final entradaDoUsuario = stdin.readLineSync()!;
   final double raio = double.parse(entradaDoUsuario);
 
-  var area = PI * raio * raio;
+  final area = PI * raio * raio;
 
   print("O valor da área é: ${area.toString()}");
 }
