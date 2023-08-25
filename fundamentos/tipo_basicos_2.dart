@@ -1,7 +1,7 @@
 /*
  - List
- - Set
  - Map
+ - Set
 */
 
 void main(List<String> args) {
@@ -12,6 +12,7 @@ void main(List<String> args) {
     'Rafael',
   ];
 
+  aprovados.add('Davniel');
   print(aprovados is List);
   print(aprovados);
   print(aprovados.elementAt(2));
@@ -32,4 +33,19 @@ void main(List<String> args) {
   print(telefones.values);
   print(telefones.keys);
   print(telefones.entries);
+
+  var times = {
+    'vasco',
+    'flamengo',
+    'fortaleza',
+    'são paulo',
+  };
+
+  print(times is Set);
+  times.add('palmeiras');
+  // times.add(123); // vai dar erro se Set<String>
+  print(times.length);
+  print(times.contains('vasco'));
+  print(times.first);
+  print(times.last);
 }
