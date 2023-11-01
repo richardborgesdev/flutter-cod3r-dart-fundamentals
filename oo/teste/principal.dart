@@ -1,4 +1,4 @@
-import '../model/pessoa.dart';
+import '../modelo/pessoa.dart';
 
 void main(List<String> args) {
   var p1 = Pessoa();
