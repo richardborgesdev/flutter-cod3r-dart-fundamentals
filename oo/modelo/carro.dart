@@ -1,36 +1,46 @@
 class Carro {
   final int velocidadeMaxima;
-  int velocidadeAtual = 0;
+  int _velocidadeAtual = 0;
 
   Carro([
     this.velocidadeMaxima = 200,
   ]);
 
+  int get velocidadeAtual => this._velocidadeAtual;
+
+  void set velocidadeAtual(int novaVelocidade) {
+    bool deltaValido = (_velocidadeAtual - novaVelocidade).abs() <= 5;
+
+    if (deltaValido && novaVelocidade >= 0) {
+      this._velocidadeAtual = novaVelocidade;
+    }
+  }
+
   int acelerar() {
-    if (velocidadeAtual + 5 >= velocidadeMaxima) {
-      velocidadeAtual = velocidadeMaxima;
+    if (_velocidadeAtual + 5 >= velocidadeMaxima) {
+      _velocidadeAtual = velocidadeMaxima;
     } else {
-      velocidadeAtual += 5;
+      _velocidadeAtual += 5;
     }
 
-    return this.velocidadeAtual;
+    return this._velocidadeAtual;
   }
 
   int frear() {
-    if (velocidadeAtual - 5 <= 0) {
-      velocidadeAtual = 0;
+    if (_velocidadeAtual - 5 <= 0) {
+      _velocidadeAtual = 0;
     } else {
-      velocidadeAtual -= 5;
+      _velocidadeAtual -= 5;
     }
 
-    return this.velocidadeAtual;
+    return this._velocidadeAtual;
   }
 
   bool estaNoLimite() {
-    return this.velocidadeAtual == this.velocidadeMaxima;
+    return this._velocidadeAtual == this.velocidadeMaxima;
   }
 
   bool estaParado() {
-    return this.velocidadeAtual == 0;
+    return this._velocidadeAtual == 0;
   }
 }

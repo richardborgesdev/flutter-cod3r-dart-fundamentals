@@ -13,5 +13,7 @@ void main(List<String> args) {
     print("A velocidade atual é ${c1.frear()}");
   }
 
+  c1.velocidadeAtual = 500;
+  c1.velocidadeAtual = 3;
   print("O carro parou com velocidade ${c1.velocidadeAtual} kmh/h");
 }
