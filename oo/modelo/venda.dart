@@ -6,7 +6,7 @@ class Venda {
   List<VendaItem> itens;
 
   Venda({
-    this.cliente,
+    required this.cliente,
     this.itens = const [],
   });
 
