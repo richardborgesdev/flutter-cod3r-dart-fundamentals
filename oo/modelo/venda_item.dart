@@ -2,11 +2,11 @@ import 'produto.dart';
 
 class VendaItem {
   int quantidade;
-  double _preco;
+  double _preco = 0.0;
   Produto produto;
 
   VendaItem({
-    this.produto,
+    required this.produto,
     this.quantidade = 1,
   });
 
